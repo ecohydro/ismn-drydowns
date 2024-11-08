@@ -125,8 +125,6 @@ site_cols = [
 
 #%% DATA IMPORT
 
-
-
 file = '../data/ismn_results_star_th0_04may.csv'
 
 ismn_t04 = read_output(file)

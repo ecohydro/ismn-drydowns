@@ -51,44 +51,32 @@ but this can be modified in the `config.ini` file.
 
 ### Code
 There are three types of files in the `code` directory:
-1. Processing scripts + related files
 
-`calc_map.py`
-- Calculate mean annual precipitation from CHIRPS data.
-`calc_mean_pet.py`
-- Calculate mean annual PET from dPET data. 
-`extract_chirps.py`
-- Extract daily rainfall data from CHIRPS for coordinates in a CSV file (ISMN stations).
-`extract_pet.py`
-- Extract daily PET data from dPET for coordinates in a CSV file (ISMN stations).
-`ismn_ancillary.py`
-- Create (+ update) ancillary data for ISMN stations (used in analysis), ismn_ancillary.csv.
-`rainfall.py`
-- Utility functions for calculating rainfall statistics.
-`separate_appeears.py`
-- Separate data downloaded from APPEEARS into separate CSV files by ISMN station (if necessary) + recombine. These files are used as ancillary inputs (GPP, LAI, etc.) in the `drydowns` code and/or in `ismn_ancillary.py`.
-`separate_pet.py`
-- Separate dPET data into CSV files by ISMN station. These files are used as ancillary inputs in the `drydowns` code.
-`soil/`
-- Module for handling ISMN soil moisture data. `soil/station.py` is a wrapper class
-  for the ISMN python package to make handling the data easier.
-`utils.py`
-- Utility functions for processing ISMN data.
+1. **Processing scripts + related files**
 
-2. `run_ismn.py`
-This script runs the drydown extraction and requires the [`drydowns`](https://github.com/ecohydro/drydowns) package.
-The output of this script is the extracted drydowns, which are saved to a CSV file, `ismn_results_star_th0_04may.csv`.
+   - `calc_map.py`: Calculate mean annual precipitation from CHIRPS data.
+   - `calc_mean_pet.py`: Calculate mean annual PET from dPET data.
+   - `extract_chirps.py`: Extract daily rainfall data from CHIRPS for coordinates in a CSV file (ISMN stations).
+   - `extract_pet.py`: Extract daily PET data from dPET for coordinates in a CSV file (ISMN stations).
+   - `ismn_ancillary.py`: Create (+ update) ancillary data for ISMN stations (used in analysis), `ismn_ancillary.csv`.
+   - `rainfall.py`: Utility functions for calculating rainfall statistics.
+   - `separate_appeears.py`: Separate data downloaded from APPEEARS into separate CSV files by ISMN station (if necessary) + recombine. These files are used as ancillary inputs (GPP, LAI, etc.) in the `drydowns` code and/or in `ismn_ancillary.py`.
+   - `separate_pet.py`: Separate dPET data into CSV files by ISMN station. These files are used as ancillary inputs in the `drydowns` code.
+   - `soil/`: Module for handling ISMN soil moisture data. `soil/station.py` is a wrapper class for the ISMN Python package to make handling the data easier.
+   - `utils.py`: Utility functions for processing ISMN data.
 
-3. Plotting scripts + related files
-`figs.py`
-- Code for importing the results + plotting Fig. 3 and supplementary figures. Must be run before `ternary.py` and `surfaces.py`.
-`conceptual.py` 
-- Code for plotting the conceptual figure in the manuscript (Fig. 1).
-`ternary.py`
-- Code for plotting the maps in the manuscript (Fig. 2).
-`surfaces.py`
-- Code for plotting the surfaces in the manuscript (Fig. 4-5).
+2. **`run_ismn.py`**
 
+   This script runs the drydown extraction and requires the [`drydowns`](https://github.com/ecohydro/drydowns) package.  
+   The output of this script is the extracted drydowns, which are saved to a CSV file, `ismn_results_star_th0_04may.csv`.
+
+3. **Plotting scripts + related files**
+
+   - `figs.py`: Code for importing the results + plotting Fig. 3 and supplementary figures. Must be run before `ternary.py` and `surfaces.py`.
+   - `conceptual.py`: Code for plotting the conceptual figure in the manuscript (Fig. 1).
+   - `ternary.py`: Code for plotting the maps in the manuscript (Fig. 2).
+   - `surfaces.py`: Code for plotting the surfaces in the manuscript (Figs. 4-5).
+  
 
 ### Data
 The "data" contained in this repository include the extracted ISMN drydowns 
