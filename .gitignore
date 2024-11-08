@@ -186,3 +186,6 @@ Thumbs.db
 *.code-workspace
 
 *log.txt
+
+# TOO BIG
+data/ismn_results_star_th0_04may.csv
